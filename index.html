@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>China 2025 — Trip Story</title>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -160,225 +160,263 @@
     margin-top:28px;color:var(--muted);font-size:13px;text-align:center;
   }
 </style>
-</head>
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+}
+#modalCaption {
+  text-align: center;
+  color: #ccc;
+  padding: 10px;
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style></head>
 <body>
-  
-  <!-- ✦ STICKY MAP - Always visible at top while scrolling -->
-  <div class="sticky-map-wrap">
-    <div class="map-card">
-      <iframe
-        class="map-iframe"
-        src="https://www.google.com/maps/d/u/1/embed?mid=1fFZgdKUWKuBdQKGpvbknbCmu2yQQUiE&ehbc=2E312F&noprof=1"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
- 
-  <div class="container">
-    <header class="hero">
-      <h1 class="title">China 2025 — 7 Cities in 10 Days</h1>
-      <p class="subtitle">From Beijing to Shanghai: Great Wall ridge walks, pandas and hotpot, neon river nights, glass bridges, and a lot of chili.</p>
-      <div class="tagbar">
-        <span class="tag">Beijing</span>
-        <span class="tag">Chengdu</span>
-        <span class="tag">Chongqing</span>
-        <span class="tag">Zhangjiajie</span>
-        <span class="tag">Changsha</span>
-        <span class="tag">Shangrao</span>
-        <span class="tag">Shanghai</span>
-      </div>
-    </header>
- 
-    <!-- 01 Beijing -->
-    <section class="section">
-      <div class="sec-head">
-        <div class="badge">01</div>
-        <h2 class="sec-title">Beijing — Great Wall &amp; Temple of Heaven</h2>
-        <div class="sec-meta">Day 1–2</div>
-      </div>
-      <div class="sec-body">
-        <div class="grid">
-          <div class="col-7">
-            <p class="blurb">Kick-off in the capital: a day trip to the Great Wall for ridge-line views and watchtowers, then the tranquil Temple of Heaven the next morning—cypress groves, bright imperial halls, and locals practicing tai chi.</p>
-            <div class="chips">
-              <span class="chip">Great Wall</span>
-              <span class="chip">Temple of Heaven</span>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="gallery">
-              <div>
-                <img class="ph" src="assets/Media (11).jpeg" alt="Beijing photo 1" loading="eager"/>
-                <div class="caption">Ridge walk</div>
-              </div>
-              <div>
-                <img class="ph" src="assets/Media (13).jpeg" alt="Beijing photo 2" loading="eager"/>
-                <div class="caption">Temple of Heaven</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- 02 Chengdu -->
-    <section class="section">
-      <div class="sec-head">
-        <div class="badge" style="background:linear-gradient(180deg,#fee9ef,#fde0e8);border-color:#f4c8d4;color:#5f2a34;">02</div>
-        <h2 class="sec-title">Chengdu — Hotpot Night &amp; Panda Research Base</h2>
-        <div class="sec-meta">Day 3–4</div>
-      </div>
-      <div class="sec-body">
-        <div class="grid">
-          <div class="col-7">
-            <p class="blurb">Classic Chengdu combo: a late hotpot with numbing Sichuan peppercorns, followed by a morning at the Chengdu Research Base of Giant Panda Breeding—playful cubs, bamboo snacks, and shaded paths.</p>
-            <div class="chips">
-              <span class="chip">Hotpot</span>
-              <span class="chip">Pandas</span>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="gallery">
-              <div><img class="ph" src="assets/Media (12).jpeg" alt="Chengdu 1" loading="eager"/><div class="caption">Hotpot</div></div>
-              <div><img class="ph" src="assets/Media (10).jpeg" alt="Chengdu 2" loading="eager"/><div class="caption">Panda base</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- 03 Chongqing -->
-    <section class="section">
-      <div class="sec-head">
-        <div class="badge" style="background:linear-gradient(180deg,#ecf8e2,#ddf0cb);border-color:#c6e6a4;color:#2f4520;">03</div>
-        <h2 class="sec-title">Chongqing — Two Rivers Night Cruise</h2>
-        <div class="sec-meta">Day 4–5</div>
-      </div>
-      <div class="sec-body">
-        <div class="grid">
-          <div class="col-7">
-            <p class="blurb">Chongqing's mountain‑city skyline shines at night. Took the Two Rivers cruise (Jialing + Yangtze) for bridges ablaze, tiered towers, and neon reflections.</p>
-            <div class="chips">
-              <span class="chip">Jialing &amp; Yangtze</span>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="gallery">
-              <div><img class="ph" src="assets/Media (9).jpeg" alt="Chongqing 1" loading="eager"/><div class="caption">Neon river</div></div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- 04 Zhangjiajie -->
-    <section class="section">
-      <div class="sec-head">
-        <div class="badge" style="background:linear-gradient(180deg,#fff3d9,#ffe8b5);border-color:#f5d48b;color:#6b4a00;">04</div>
-        <h2 class="sec-title">Zhangjiajie — Glass Bridge, Avatar Mountains &amp; Yellow Dragon Cave</h2>
-        <div class="sec-meta">Day 5–7</div>
-      </div>
-      <div class="sec-body">
-        <div class="grid">
-          <div class="col-7">
-            <p class="blurb">Surreal Wulingyuan landscapes: crossed the glass‑bottom Zhangjiajie Grand Canyon Bridge, then hiked among the 'Avatar' sandstone pillars in the national park—mist curling around the spires. Finished at Huanglong (Yellow Dragon) Cave with enormous caverns and stalactites.</p>
-            <div class="chips">
-              <span class="chip">Glass Bridge</span>
-              <span class="chip">Wulingyuan</span>
-              <span class="chip">Huanglong Cave</span>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="gallery">
-              <div><img class="ph" src="assets/Media (8).jpeg" alt="Zhangjiajie 1" loading="eager"/><div class="caption">Grand Canyon Bridge</div></div>
-              <div><img class="ph" src="assets/Media (7).jpeg" alt="Zhangjiajie 2" loading="eager"/><div class="caption">Avatar peaks</div></div>
-              <div><img class="ph" src="assets/Media (6).jpeg" alt="Zhangjiajie 3" loading="eager"/><div class="caption">Caverns</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- 05 Changsha -->
-    <section class="section">
-      <div class="sec-head">
-        <div class="badge" style="background:linear-gradient(180deg,#eaf0ff,#dbe5ff);border-color:#c8d1ff;color:#233064;">05</div>
-        <h2 class="sec-title">Changsha — City Wander &amp; Sky‑High Dinner</h2>
-        <div class="sec-meta">Day 7–8</div>
-      </div>
-      <div class="sec-body">
-        <div class="grid">
-          <div class="col-7">
-            <p class="blurb">Explored Changsha's pedestrian streets (Huangxing Road area) with neon signs. Dinner with a view at the high‑rise Niccolo (around the 93rd floor), watching the city lights spread to the river.</p>
-            <div class="chips">
-              <span class="chip">Huangxing Rd</span>
-              <span class="chip">Dinner with skyline views</span>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="gallery">
-              <div><img class="ph" src="assets/Media (5).jpeg" alt="Changsha 1" loading="eager"/><div class="caption">Neon street</div></div>
-              <div><img class="ph" src="assets/Media (4).jpeg" alt="Changsha 3" loading="eager"/><div class="caption">Niccolo dinner</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- 06 Shangrao -->
-    <section class="section">
-      <div class="sec-head">
-        <div class="badge" style="background:linear-gradient(180deg,#eef7ff,#e0f2ff);border-color:#cfe9ff;color:#1e3a56;">06</div>
-        <h2 class="sec-title">Shangrao — Easygoing City Stop &amp; Shopping</h2>
-        <div class="sec-meta">Day 8–9</div>
-      </div>
-      <div class="sec-body">
-        <div class="grid">
-          <div class="col-7">
-            <p class="blurb">A laid‑back pause in Jiangxi province: strolled central Shangrao and popped into local shopping malls for snacks and souvenirs.</p>
-            <div class="chips">
-              <span class="chip">City walk</span>
-              <span class="chip">Local malls</span>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="gallery">
-              <div><img class="ph" src="assets/Media (3).jpeg" alt="Shangrao 2" loading="eager"/><div class="caption">Shopping</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <!-- 07 Shanghai -->
-    <section class="section">
-      <div class="sec-head">
-        <div class="badge" style="background:linear-gradient(180deg,#eaf6ff,#e7f7fb);border-color:#d2eefc;color:#1b3747;">07</div>
-        <h2 class="sec-title">Shanghai — Skyline Icons, Shopping Street &amp; Museum Time</h2>
-        <div class="sec-meta">Day 9–10</div>
-      </div>
-      <div class="sec-body">
-        <div class="grid">
-          <div class="col-7">
-            <p class="blurb">Wrapped in Shanghai: the Bund's skyline with the Oriental Pearl Tower, then shopping along the Nanjing Road pedestrian street. Dinner at Mercato (Italian) on the Bund—city lights over the river. Ended with a visit to the Shanghai Natural History Museum's striking atrium.</p>
-            <div class="chips">
-              <span class="chip">The Bund</span>
-              <span class="chip">Nanjing Rd</span>
-              <span class="chip">Mercato</span>
-              <span class="chip">Natural History Museum</span>
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="gallery">
-              <div><img class="ph" src="assets/Media (2).jpeg" alt="Shanghai 1" loading="eager"/><div class="caption">Bund skyline</div></div>
-              <div><img class="ph" src="assets/Media (1).jpeg" alt="Shanghai 2" loading="eager"/><div class="caption">Nanjing Rd</div></div>
-              <div><img class="ph" src="assets/Media.jpeg" alt="Shanghai 3" loading="eager"/><div class="caption">Mercato dinner</div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
- 
-    <div class="divider"></div>
-  </div>
-</body>
+<!-- ✦ STICKY MAP - Always visible at top while scrolling -->
+<div class="sticky-map-wrap">
+<div class="map-card">
+<iframe allowfullscreen="" class="map-iframe" loading="lazy" src="https://www.google.com/maps/d/u/1/embed?mid=1fFZgdKUWKuBdQKGpvbknbCmu2yQQUiE&amp;ehbc=2E312F&amp;noprof=1">
+</iframe>
+</div>
+</div>
+<div class="container">
+<header class="hero">
+<h1 class="title">China 2025 — 7 Cities in 10 Days</h1>
+<p class="subtitle">From Beijing to Shanghai: Great Wall ridge walks, pandas and hotpot, neon river nights, glass bridges, and a lot of chili.</p>
+<div class="tagbar">
+<span class="tag">Beijing</span>
+<span class="tag">Chengdu</span>
+<span class="tag">Chongqing</span>
+<span class="tag">Zhangjiajie</span>
+<span class="tag">Changsha</span>
+<span class="tag">Shangrao</span>
+<span class="tag">Shanghai</span>
+</div>
+</header>
+<!-- 01 Beijing -->
+<section class="section">
+<div class="sec-head">
+<div class="badge">01</div>
+<h2 class="sec-title">Beijing — Great Wall &amp; Temple of Heaven</h2>
+<div class="sec-meta">Day 1–2</div>
+</div>
+<div class="sec-body">
+<div class="grid">
+<div class="col-7">
+<p class="blurb">Kick-off in the capital: a day trip to the Great Wall for ridge-line views and watchtowers, then the tranquil Temple of Heaven the next morning—cypress groves, bright imperial halls, and locals practicing tai chi.</p>
+<div class="chips">
+<span class="chip">Great Wall</span>
+<span class="chip">Temple of Heaven</span>
+</div>
+</div>
+<div class="col-5">
+<div class="gallery">
+<div>
+<img alt="Beijing photo 1" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (11).jpeg"/>
+<div class="caption">Ridge walk</div>
+</div>
+<div>
+<img alt="Beijing photo 2" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (13).jpeg"/>
+<div class="caption">Temple of Heaven</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 02 Chengdu -->
+<section class="section">
+<div class="sec-head">
+<div class="badge" style="background:linear-gradient(180deg,#fee9ef,#fde0e8);border-color:#f4c8d4;color:#5f2a34;">02</div>
+<h2 class="sec-title">Chengdu — Hotpot Night &amp; Panda Research Base</h2>
+<div class="sec-meta">Day 3–4</div>
+</div>
+<div class="sec-body">
+<div class="grid">
+<div class="col-7">
+<p class="blurb">Classic Chengdu combo: a late hotpot with numbing Sichuan peppercorns, followed by a morning at the Chengdu Research Base of Giant Panda Breeding—playful cubs, bamboo snacks, and shaded paths.</p>
+<div class="chips">
+<span class="chip">Hotpot</span>
+<span class="chip">Pandas</span>
+</div>
+</div>
+<div class="col-5">
+<div class="gallery">
+<div><img alt="Chengdu 1" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (12).jpeg"/><div class="caption">Hotpot</div></div>
+<div><img alt="Chengdu 2" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (10).jpeg"/><div class="caption">Panda base</div></div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- 03 Chongqing -->
+<section class="section">
+<div class="sec-head">
+<div class="badge" style="background:linear-gradient(180deg,#ecf8e2,#ddf0cb);border-color:#c6e6a4;color:#2f4520;">03</div>
+<h2 class="sec-title">Chongqing — Two Rivers Night Cruise</h2>
+<div class="sec-meta">Day 4–5</div>
+</div>
+<div class="sec-body">
+<div class="grid">
+<div class="col-7">
+<p class="blurb">Chongqing's mountain‑city skyline shines at night. Took the Two Rivers cruise (Jialing + Yangtze) for bridges ablaze, tiered towers, and neon reflections.</p>
+<div class="chips">
+<span class="chip">Jialing &amp; Yangtze</span>
+</div>
+</div>
+<div class="col-5">
+<div class="gallery">
+<div><img alt="Chongqing 1" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (9).jpeg"/><div class="caption">Neon river</div></div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- 04 Zhangjiajie -->
+<section class="section">
+<div class="sec-head">
+<div class="badge" style="background:linear-gradient(180deg,#fff3d9,#ffe8b5);border-color:#f5d48b;color:#6b4a00;">04</div>
+<h2 class="sec-title">Zhangjiajie — Glass Bridge, Avatar Mountains &amp; Yellow Dragon Cave</h2>
+<div class="sec-meta">Day 5–7</div>
+</div>
+<div class="sec-body">
+<div class="grid">
+<div class="col-7">
+<p class="blurb">Surreal Wulingyuan landscapes: crossed the glass‑bottom Zhangjiajie Grand Canyon Bridge, then hiked among the 'Avatar' sandstone pillars in the national park—mist curling around the spires. Finished at Huanglong (Yellow Dragon) Cave with enormous caverns and stalactites.</p>
+<div class="chips">
+<span class="chip">Glass Bridge</span>
+<span class="chip">Wulingyuan</span>
+<span class="chip">Huanglong Cave</span>
+</div>
+</div>
+<div class="col-5">
+<div class="gallery">
+<div><img alt="Zhangjiajie 1" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (8).jpeg"/><div class="caption">Grand Canyon Bridge</div></div>
+<div><img alt="Zhangjiajie 2" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (7).jpeg"/><div class="caption">Avatar peaks</div></div>
+<div><img alt="Zhangjiajie 3" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (6).jpeg"/><div class="caption">Caverns</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 05 Changsha -->
+<section class="section">
+<div class="sec-head">
+<div class="badge" style="background:linear-gradient(180deg,#eaf0ff,#dbe5ff);border-color:#c8d1ff;color:#233064;">05</div>
+<h2 class="sec-title">Changsha — City Wander &amp; Sky‑High Dinner</h2>
+<div class="sec-meta">Day 7–8</div>
+</div>
+<div class="sec-body">
+<div class="grid">
+<div class="col-7">
+<p class="blurb">Explored Changsha's pedestrian streets (Huangxing Road area) with neon signs. Dinner with a view at the high‑rise Niccolo (around the 93rd floor), watching the city lights spread to the river.</p>
+<div class="chips">
+<span class="chip">Huangxing Rd</span>
+<span class="chip">Dinner with skyline views</span>
+</div>
+</div>
+<div class="col-5">
+<div class="gallery">
+<div><img alt="Changsha 1" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (5).jpeg"/><div class="caption">Neon street</div></div>
+<div><img alt="Changsha 3" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (4).jpeg"/><div class="caption">Niccolo dinner</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 06 Shangrao -->
+<section class="section">
+<div class="sec-head">
+<div class="badge" style="background:linear-gradient(180deg,#eef7ff,#e0f2ff);border-color:#cfe9ff;color:#1e3a56;">06</div>
+<h2 class="sec-title">Shangrao — Easygoing City Stop &amp; Shopping</h2>
+<div class="sec-meta">Day 8–9</div>
+</div>
+<div class="sec-body">
+<div class="grid">
+<div class="col-7">
+<p class="blurb">A laid‑back pause in Jiangxi province: strolled central Shangrao and popped into local shopping malls for snacks and souvenirs.</p>
+<div class="chips">
+<span class="chip">City walk</span>
+<span class="chip">Local malls</span>
+</div>
+</div>
+<div class="col-5">
+<div class="gallery">
+<div><img alt="Shangrao 2" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (3).jpeg"/><div class="caption">Shopping</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 07 Shanghai -->
+<section class="section">
+<div class="sec-head">
+<div class="badge" style="background:linear-gradient(180deg,#eaf6ff,#e7f7fb);border-color:#d2eefc;color:#1b3747;">07</div>
+<h2 class="sec-title">Shanghai — Skyline Icons, Shopping Street &amp; Museum Time</h2>
+<div class="sec-meta">Day 9–10</div>
+</div>
+<div class="sec-body">
+<div class="grid">
+<div class="col-7">
+<p class="blurb">Wrapped in Shanghai: the Bund's skyline with the Oriental Pearl Tower, then shopping along the Nanjing Road pedestrian street. Dinner at Mercato (Italian) on the Bund—city lights over the river. Ended with a visit to the Shanghai Natural History Museum's striking atrium.</p>
+<div class="chips">
+<span class="chip">The Bund</span>
+<span class="chip">Nanjing Rd</span>
+<span class="chip">Mercato</span>
+<span class="chip">Natural History Museum</span>
+</div>
+</div>
+<div class="col-5">
+<div class="gallery">
+<div><img alt="Shanghai 1" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (2).jpeg"/><div class="caption">Bund skyline</div></div>
+<div><img alt="Shanghai 2" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media (1).jpeg"/><div class="caption">Nanjing Rd</div></div>
+<div><img alt="Shanghai 3" class="ph" loading="eager" onclick="openModal(this)" src="assets/Media.jpeg"/><div class="caption">Mercato dinner</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="divider"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="lightboxModal" onclick="closeModal()">
+<span class="close">×</span>
+<img class="modal-content" id="modalImage"/>
+<div id="modalCaption"></div>
+</div>
+<script>
+function openModal(imgElement) {
+  const modal = document.getElementById("lightboxModal");
+  const modalImg = document.getElementById("modalImage");
+  const captionText = document.getElementById("modalCaption");
+  modal.style.display = "block";
+  modalImg.src = imgElement.src;
+  captionText.innerHTML = imgElement.alt;
+}
+function closeModal() {
+  document.getElementById("lightboxModal").style.display = "none";
+}
+</script></body>
 </html>
