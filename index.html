@@ -4,6 +4,20 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>China 2025 — Trip Story</title>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const stickyMap = document.querySelector(".sticky-map-wrap");
+    const shrinkThreshold = stickyMap.offsetHeight; // You can tweak this value
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > shrinkThreshold) {
+        stickyMap.classList.add("shrunk");
+      } else {
+        stickyMap.classList.remove("shrunk");
+      }
+    });
+  });
+</script>
 <style>
   :root{
     --bg:#fcfcfd;
@@ -31,6 +45,12 @@
     z-index:999;
     background:#fff;
     box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    transition: width 0.3s ease;
+    width: 100%;
+  }
+  .sticky-map-wrap.shrunk {
+    width: 50%;
+    margin: 0;
   }
   .map-card{
     border-radius:0 0 var(--radius) var(--radius);
@@ -39,7 +59,7 @@
   }
   .map-iframe{
     width:100%;
-    height:380px;
+    height:360px;
     border:0;
     display:block;
   }
